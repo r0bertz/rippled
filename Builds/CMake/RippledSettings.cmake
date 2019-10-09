@@ -40,6 +40,7 @@ else ()
   set (use_lld OFF CACHE BOOL "try lld linker, clang only" FORCE)
 endif ()
 option (jemalloc "Enables jemalloc for heap profiling" OFF)
+option (tcmalloc "Enables tcmalloc for heap profiling" OFF)
 option (werr "treat warnings as errors" OFF)
 option (local_protobuf
   "Force use of a local build of protobuf instead of system version." OFF)

@@ -53,6 +53,11 @@ if (jemalloc)
   set (CMAKE_BUILD_RPATH ${CMAKE_BUILD_RPATH} ${JEMALLOC_LIB_PATH})
 endif ()
 
+if (tcmalloc)
+  find_package (tcmalloc REQUIRED)
+  target_link_libraries (opts INTERFACE ${TCMALLOC_LIBRARIES})
+endif ()
+
 if (san)
   target_compile_options (opts
     INTERFACE
