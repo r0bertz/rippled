@@ -22,6 +22,8 @@
 #include <ripple/beast/rfc2616.h>
 #include <ripple/beast/core/LexicalCast.h>
 
+#include <boost/algorithm/string/predicate.hpp>
+
 namespace ripple {
 
 bool

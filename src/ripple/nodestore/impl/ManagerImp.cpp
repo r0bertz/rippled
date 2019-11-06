@@ -20,6 +20,8 @@
 #include <ripple/nodestore/impl/ManagerImp.h>
 #include <ripple/nodestore/impl/DatabaseNodeImp.h>
 
+#include <boost/algorithm/string/predicate.hpp>
+
 namespace ripple {
 namespace NodeStore {
 
