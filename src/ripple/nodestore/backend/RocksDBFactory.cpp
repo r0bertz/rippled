@@ -185,6 +185,12 @@ public:
 
         m_options.table_factory.reset(NewBlockBasedTableFactory(table_options));
 
+        if (keyValues.exists("optimize_for_point_lookup"))
+        {
+            m_options.OptimizeForPointLookup(
+                get<int>(keyValues, "cache_mb", 512) * megabytes(1));
+        }
+
         if (keyValues.exists("options"))
         {
             auto const s = rocksdb::GetOptionsFromString(
